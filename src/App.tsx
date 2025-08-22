@@ -28,6 +28,7 @@ function App() {
             <h3>Angela Yu</h3>
                 <Card snapshot={ReactIcon} projectName='WW' projectDescription='ss'/>
                 <Card projectName='Coming soon'/>
+                <Card projectName='Coming soon'/>
         </ul>
         
     </div>
