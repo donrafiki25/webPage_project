@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, p, a, ul, li {
 
 body {
     display: grid;
-    grid-template-rows: minmax(50px, 8vh) auto minmax(50px, 8vh);
+    grid-template-rows: minmax(50px, 8vh) 1vh minmax(50px, 8vh);
 
     min-height: 100vh;
 }

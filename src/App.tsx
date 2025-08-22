@@ -26,7 +26,7 @@ function App() {
         <ul>
             <h2>Udemy</h2>
             <h3>Angela Yu</h3>
-                <Card snapshot={ReactIcon} projectName='WW' projectDescription='ss'/>
+                <Card snapshot={ReactIcon} projectName='Dicee' projectDescription='Game of two dice, random numbers.'/>
                 <Card projectName='Coming soon'/>
                 <Card projectName='Coming soon'/>
         </ul>
