@@ -1,0 +1,21 @@
+#card {
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    border: 1px var(--shadowColor) solid;
+
+    min-height: 50px;
+    max-height: 100px;
+
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#card_leftSide, #card_rightSide {
+    align-self: center;
+}
+
+#card_rightSide {
+    display: grid;
+    grid-template-rows: 30px auto;
+}

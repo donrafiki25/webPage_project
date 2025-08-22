@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, p, a, ul, li {
+    background-color: transparent !important;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: minmax(50px, 8vh) auto minmax(50px, 8vh);
+
+    min-height: 100vh;
+}
+
+#topbar, #footer, #content {
+    border: 1px var(--borderColor) solid;
+    border-radius: 8px;
+    box-shadow: 0px 3px var(--shadowColor);
+
+    padding: 10px;
+
+    margin: 10px !important;
+}
+
+#topbar, #footer {
+    display: grid;
+}
+#topbar {
+    grid-template-columns: 10% auto 10%;
+}
+
+#leftSide {
+    align-self: center;
+}
+
+#rightSide {
+    text-align: right;
+    align-self: center;
+}
+
+#centerSide {
+    text-align: center;
+    align-self: center;
+}
+
+#content {
+    flex-grow: 1;
+}
+
+#footer {
+    grid-template-columns: 50% 50%;
+}
+
+/*COLORS*/
+* {
+    --backgroundColor-body: #f4f4f3;
+    --borderColor: #c0c0c0;
+    --shadowColor: #0000000f;
+    --backgroundColor-Card: #ffffff;
+    --backgroundColor-Dicee: #35654d;
+}

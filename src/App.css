@@ -1,0 +1,16 @@
+body {
+    background-color: var(--backgroundColor-body);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.diceeLink{
+    text-decoration: none;
+}
+
+#topbar, #content, #footer {
+    background-color: var(--backgroundColor-Card);
+}
