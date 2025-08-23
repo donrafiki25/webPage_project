@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, p, a, ul, li {
 
 #root {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 100px 1fr 100px;
 
     height: 100vh;
 }
@@ -49,10 +49,6 @@ h1, h2, h3, h4, h5, p, a, ul, li {
     text-align: center;
     align-self: center;
 }
-
-/* #content {
-    min-height: 60vh;
-} */
 
 #footer {
     grid-template-columns: 50% 50%;
