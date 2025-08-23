@@ -1,3 +1,5 @@
+import '../UI/Card.css'
+
 interface CardProps{
     snapshot?: string|null,
     projectName: string,

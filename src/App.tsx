@@ -1,10 +1,9 @@
 import './General.css'
 import './App.css'
-import './UI/Card.css'
 
 import ReactIcon from "./assets/react.svg"
 
-import Card from './UI/Card'
+import Card from './Controls/Card'
 
 function App() {
 

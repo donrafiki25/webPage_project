@@ -1,6 +1,6 @@
 #card {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 10% auto;
 
     border: 1px var(--shadowColor) solid;
 

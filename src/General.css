@@ -12,7 +12,7 @@ body {
     display: grid;
     grid-template-rows: minmax(50px, 8vh) 1vh minmax(50px, 8vh);
 
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 #topbar, #footer, #content {
@@ -46,9 +46,9 @@ body {
     align-self: center;
 }
 
-#content {
-    flex-grow: 1;
-}
+/* #content {
+    min-height: 60vh;
+} */
 
 #footer {
     grid-template-columns: 50% 50%;
