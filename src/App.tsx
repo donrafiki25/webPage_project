@@ -28,6 +28,9 @@ function App() {
                 <Card snapshot={ReactIcon} projectName='Dicee' projectDescription='Game of two dice, random numbers.'/>
                 <Card projectName='Coming soon'/>
                 <Card projectName='Coming soon'/>
+                <Card projectName='Coming soon'/>
+                <Card projectName='Coming soon'/>
+                <Card projectName='Coming soon'/>
         </ul>
         
     </div>

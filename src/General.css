@@ -8,11 +8,11 @@ h1, h2, h3, h4, h5, p, a, ul, li {
     margin: 0;
 }
 
-body {
+#root {
     display: grid;
-    grid-template-rows: minmax(50px, 8vh) 1vh minmax(50px, 8vh);
+    grid-template-rows: auto 1fr auto;
 
-    /* min-height: 100vh; */
+    height: 100vh;
 }
 
 #topbar, #footer, #content {
@@ -23,6 +23,10 @@ body {
     padding: 10px;
 
     margin: 10px !important;
+}
+
+#content {
+    overflow-y: auto;
 }
 
 #topbar, #footer {
