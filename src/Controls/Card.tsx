@@ -1,7 +1,8 @@
-import '../UI/Card.css'
+import '../Styles/Card.css';
+import NoSnapshot from "../assets/NoPhotoLoaded.svg";
 
 interface CardProps{
-    snapshot?: string|null,
+    snapshot?: string|undefined,
     projectName: string,
     projectDescription?: string|null
 }
@@ -12,8 +13,7 @@ export default function Card(props: CardProps) {
         <li>
             <div id="card">
                 <div id="card_leftSide">
-                    <div></div>
-                    {props.snapshot !== null ? <img src={props.snapshot}></img> : <></>}
+                    {props.snapshot !== undefined ? <img className='snapshot' src={props.snapshot}></img>: <img className='snapshot' src={NoSnapshot}></img>}
                     
                 </div>
                 <div id="card_rightSide">
@@ -23,7 +23,6 @@ export default function Card(props: CardProps) {
                     <div id="cardDescription">
                         {props.projectDescription !== null ? props.projectDescription : "No description"}
                     </div>
-                    {/* <a className="diceeLink" href="./Dicee/dicee.html">Dicee</a> */}
                 </div>
             </div>
         </li>

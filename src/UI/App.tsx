@@ -1,11 +1,16 @@
-import './General.css'
-import './App.css'
+import { BrowserRouter } from 'react-router';
+import { useState } from 'react';
 
-import ReactIcon from "./assets/react.svg"
+import '../Styles/General.css';
+import '../Styles/App.css';
 
-import Card from './Controls/Card'
+import ReactIcon from "../assets/react.svg";
+
+import Card from '../Controls/Card';
 
 function App() {
+
+    const [setDisplayDicee, displayDicee] = useState<boolean>(false);
 
   return (
     <>
@@ -26,8 +31,8 @@ function App() {
             <h2>Udemy</h2>
             <h3>Angela Yu</h3>
                 <Card snapshot={ReactIcon} projectName='Dicee' projectDescription='Game of two dice, random numbers.'/>
-                <Card projectName='Coming soon'/>
-                <Card projectName='Coming soon'/>
+                <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands."/>
+                <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news."}/>
                 <Card projectName='Coming soon'/>
                 <Card projectName='Coming soon'/>
                 <Card projectName='Coming soon'/>
@@ -36,13 +41,12 @@ function App() {
     </div>
     <div id="footer">
         <div id="leftSide">
-            <p>Rafael Agustín López Hernández, 2025</p> 
+            <p>Rafael Agustín López Hernández, 2025</p>
         </div>
         <div id="rightSide">
-            <button>LinkedIn</button>
-            <button>Email</button>
+            <button onClick={() => window.open("https://www.linkedin.com/in/rafael-agustín-lópez-hernández-420085191", '_blank')}>LinkedIn</button>
             <button>Curriculum Vitae</button>
-            <button>Button</button>
+            <button>Email</button>
         </div>
     </div>
     </>

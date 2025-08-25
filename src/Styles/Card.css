@@ -1,6 +1,6 @@
 #card {
     display: grid;
-    grid-template-columns: 15% auto;
+    grid-template-columns: minmax(70px, 10%) auto;
 
     border: 1px var(--shadowColor) solid;
 
@@ -18,4 +18,8 @@
 #card_rightSide {
     display: grid;
     grid-template-rows: 30px auto;
+}
+
+#card_leftSide {
+    text-align: center;
 }
