@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, p, a, ul, li {
 #topbar, #footer, #content {
     border: 1px var(--borderColor) solid;
     border-radius: 8px;
-    box-shadow: 0px 3px var(--shadowColor);
+    box-shadow: 0px 3px var(--shadowAndHoverColor);
 
     padding: 10px;
 
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, p, a, ul, li {
 * {
     --backgroundColor-body: #f4f4f3;
     --borderColor: #c0c0c0;
-    --shadowColor: #0000000f;
+    --shadowAndHoverColor: #0000000f;
     --backgroundColor-Card: #ffffff;
     --backgroundColor-Dicee: #35654d;
 }

@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router';
 import { useState } from 'react';
+import { useNavigate, Outlet } from 'react-router';
 
 import '../Styles/General.css';
 import '../Styles/App.css';
@@ -10,7 +10,25 @@ import Card from '../Controls/Card';
 
 function App() {
 
-    const [setDisplayDicee, displayDicee] = useState<boolean>(false);
+    let navigate = useNavigate();
+
+    let [displayDicee, setDisplayDicee] = useState<boolean>(false);
+
+    function displayDiceeScreen(): boolean {
+        if(displayDicee === true){
+            navigate('/');
+            setDisplayDicee(false);
+            
+            return false;
+        } else {
+            navigate('/Dicee');
+            setDisplayDicee(true);
+            
+            return true;
+        }
+    }
+
+
 
   return (
     <>
@@ -30,11 +48,12 @@ function App() {
         <ul>
             <h2>Udemy</h2>
             <h3>Angela Yu</h3>
-                <Card snapshot={ReactIcon} projectName='Dicee' projectDescription='Game of two dice, random numbers.'/>
+                <Card snapshot={ReactIcon} projectName='Dicee' projectDescription='Game of two dice, random numbers.' onClick={() => displayDiceeScreen()} />
+                {displayDicee ? <Outlet/>:  <></>}
+        </ul>
+        <ul>
                 <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands."/>
                 <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news."}/>
-                <Card projectName='Coming soon'/>
-                <Card projectName='Coming soon'/>
                 <Card projectName='Coming soon'/>
         </ul>
         

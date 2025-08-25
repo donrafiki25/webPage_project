@@ -1,10 +1,18 @@
+import '../Styles/Dicee.css';
+
+import { useNavigate } from 'react-router';
+
 export default function Dicee() {
 
+    const navigate = useNavigate();
+
+    console.log("Clicked on Dicee");
+
     return(
-        <>
+        <div id='body_Dicee'>
             <div id="topbar">
                 <div id="leftSide">
-                    <a href="../home.html">Home</a>
+                    <button title='Wololo' onClick={() => navigate('/')}>Close</button>
                 </div>
                 <div id="centerSide">
                     <h1>Dicee</h1>
@@ -16,17 +24,6 @@ export default function Dicee() {
     
             <div id="content">Wololo</div>
 
-            {/* <div id="footer">
-                <div id="leftSide">
-                    <p>Rafael Agustín López Hernández, 2025</p> 
-                </div>
-                <div id="rightSide">
-                    <button>LinkedIn</button>
-                    <button>Email</button>
-                    <button>Curriculum Vitae</button>
-                    <button>Button</button>
-                </div>
-            </div> */}
-        </>
+        </div>
     );
 }

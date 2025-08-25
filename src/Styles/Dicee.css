@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
+#body_Dicee {
     background-color: var(--backgroundColor-Dicee);
+    height: 100vh;
 }

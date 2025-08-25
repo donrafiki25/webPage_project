@@ -1,14 +1,19 @@
 #card {
     display: grid;
-    grid-template-columns: minmax(70px, 10%) auto;
+    grid-template-columns: minmax(70px, 10%) auto 50px;
 
-    border: 1px var(--shadowColor) solid;
+    border: 1px var(--shadowAndHoverColor) solid;
 
     min-height: 50px;
     max-height: 100px;
 
     padding: 10px;
     margin: 10px 0;
+}
+
+#card:hover {
+    background-color: var(--shadowAndHoverColor);
+    cursor: pointer;
 }
 
 #card_leftSide, #card_rightSide {
