@@ -23,10 +23,10 @@ export default function Dicee() {
 
         if (ranDice1 > ranDice2){
             console.log('Player 1 Won!');
-            document.getElementById('diceTitle')!.innerHTML = "Player 1 Won!";
+            document.getElementById('diceTitle')!.innerHTML = "<-- Player 1 Won!";
         } else if(ranDice1 < ranDice2) {
             console.log('Player 2 Won');
-            document.getElementById('diceTitle')!.innerHTML = "Player 2 Won!";
+            document.getElementById('diceTitle')!.innerHTML = "Player 2 Won! -->";
         } else {
             console.log('Tie? Draw again');
             document.getElementById('diceTitle')!.innerHTML = "A tie? Roll again!";
