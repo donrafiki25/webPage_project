@@ -6,23 +6,11 @@ interface CardProps{
     snapshot?: string|undefined,
     projectName: string,
     projectDescription?: string|null,
+    collapseExpand?: boolean,
     onClick?: () => void
 }
 
 export default function Card(props: CardProps) {
-    
-    const [collapseExpand, setCollapseExpand] = useState<boolean>(false);
-
-    function collapseExpandIcon(): boolean {
-        if(collapseExpand === true){
-            setCollapseExpand(false);
-            
-            return false;
-        } else {
-            setCollapseExpand(true);
-            
-            return true;
-        }}
 
     return(
         <li>
@@ -40,7 +28,8 @@ export default function Card(props: CardProps) {
                     </div>
                 </div>
                 <div id='collapseExpand'>
-                    V
+                    {/* {!collapseExpand ? <img></img> : <img></img>} */}
+                    {props.collapseExpand ? <>V</> : <>/\</>}
                 </div>
             </div>
         </li>

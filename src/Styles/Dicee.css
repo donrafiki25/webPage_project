@@ -1,4 +1,47 @@
 #body_Dicee {
     background-color: var(--backgroundColor-Dicee);
     height: 100vh;
+
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: 100px auto;
+}
+
+#titleDicee {
+    text-align: center;
+}
+
+#content_Dicee {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+#diceTitle {
+
+    display: flex;
+
+    border: 1px solid var(--borderColor);
+    border-radius: 8px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 256px;
+    width: 90%;
+
+    color: #ffffff;
+    
+    cursor: pointer;
+}
+
+#diceTitle:hover {
+    background-color: var(--shadowAndHoverColor);
+}
+
+.dices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
