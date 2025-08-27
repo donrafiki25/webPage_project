@@ -17,7 +17,7 @@ export default function About(props: AboutProps) {
                     </button>
                 </div>
                 <div id='contentAbout'>
-                    <p>Content</p>
+                    <p>This page was made with the intention of a self-learn approach, making a web page with multiple projects. These projects could turn into their own thing, but meanwhile they are just prototypes.</p>
                 </div>
                 <div id='footerAbout'>
                     <p>Footer</p>
