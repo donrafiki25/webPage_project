@@ -63,6 +63,14 @@ h1, h2, h3, h4, h5, p, a, ul, li {
     align-self: center;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+}
+
 /*COLORS*/
 * {
     --backgroundColor-body: #f4f4f3;
@@ -74,3 +82,4 @@ h1, h2, h3, h4, h5, p, a, ul, li {
     --descriptionText: #808080;
     --modalBackground: #0000008f;
 }
+

@@ -33,4 +33,13 @@
     justify-self: center;
     align-items: center;
     align-self: center;
+
+    background-color: transparent;
+    border: none;
+    
+}
+
+#closeModal:hover {
+    cursor: pointer;
+    background-color: var(--shadowAndHoverColor);
 }

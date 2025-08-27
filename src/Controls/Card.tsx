@@ -17,7 +17,7 @@ export default function Card(props: CardProps) {
     return(
         <li>
             <div id="card" onClick={props.onClick}>
-                <div id="card_leftSide">
+                <div id="card_leftSide" className='center'>
                     {props.snapshot !== undefined ? <img className='snapshot' src={props.snapshot}></img>: <img className='snapshot' src={NoSnapshot}></img>}
                     
                 </div>

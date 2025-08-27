@@ -3,7 +3,7 @@ interface AboutProps{
 }
 
 import '../Styles/About.css';
-import CloseIcon from '../assets/Chevron_Double_Collapse.svg';
+import CloseIcon from '../assets/CloseIcon.svg';
 
 export default function About(props: AboutProps) {
 
