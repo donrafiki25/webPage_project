@@ -14,3 +14,13 @@ ul {
 #topbar, #content, #footer {
     background-color: var(--backgroundColor-Card);
 }
+
+#homeButton:disabled:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+#aboutButton, #rightSide > button {
+    font-size: 16px;
+    font-weight: 800;
+}

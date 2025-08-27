@@ -12,7 +12,7 @@
 
 #aboutModal {
     display: grid;
-    grid-template-rows: minmax(50px, 80px) auto minmax(50px, 80px);
+    grid-template-rows: minmax(30px, 50px) auto minmax(30px, 50px);
 
     background-color: var(--backgroundColor-body);
     margin: 15% auto;
@@ -42,4 +42,18 @@
 #closeModal:hover {
     cursor: pointer;
     background-color: var(--shadowAndHoverColor);
+}
+
+#contentAbout, #footerAbout {
+    text-align: left;
+}
+#footerAbout {
+    display: grid;
+    grid-template-columns: auto 16px;
+}
+
+#footerAbout > img {
+    max-height: 16px;
+    text-align: right;
+    background-color: red;
 }

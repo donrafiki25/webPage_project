@@ -71,6 +71,16 @@ h1, h2, h3, h4, h5, p, a, ul, li {
     align-self: center;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--shadowAndHoverColor);
+    cursor: pointer;
+}
+
 /*COLORS*/
 * {
     --backgroundColor-body: #f4f4f3;

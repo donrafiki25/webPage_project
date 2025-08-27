@@ -6,6 +6,7 @@ import '../Styles/App.css';
 
 import ReactIcon from "../assets/react.svg";
 import DiceeSnapshot from "../assets/Dicee/DiceeCardSnapshot.png";
+import HomeIcon from '../assets/HomeIcon_Fill.svg';
 
 import Card from '../Controls/Card';
 import About from './About';
@@ -45,13 +46,15 @@ function App() {
     <>
       <div id="topbar">
         <div id="leftSide">
-              <button disabled>Home</button> 
+            <button id='homeButton' disabled>
+                <img src={HomeIcon}></img>    
+            </button> 
         </div>
         <div id="centerSide">
             <h1 className="title">Personal projects</h1>
         </div>
         <div id="rightSide">
-            <button onClick={() => openAbout()}>About</button>
+            <button id='aboutButton' onClick={() => openAbout()}>About</button>
             {displayAbout ? <About openAbout={() => openAbout()}/> : <></>}
         </div>
     </div>
