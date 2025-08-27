@@ -5,14 +5,17 @@ import '../Styles/General.css';
 import '../Styles/App.css';
 
 import ReactIcon from "../assets/react.svg";
+import DiceeSnapshot from "../assets/Dicee/DiceeCardSnapshot.png";
 
 import Card from '../Controls/Card';
+import About from './About';
 
 function App() {
 
     let navigate = useNavigate();
 
     let [displayDicee, setDisplayDicee] = useState<boolean>(false);
+    let [displayAbout, setDisplayAbout] = useState<boolean>(false);
 
     function displayDiceeScreen(): boolean {
         if(displayDicee === true){
@@ -28,7 +31,15 @@ function App() {
         }
     }
 
-
+    function openAbout(): boolean {
+        if(displayAbout === true){
+            setDisplayAbout(false);
+            return false;
+        } else {
+            setDisplayAbout(true);
+            return true;
+        }
+    }
 
   return (
     <>
@@ -40,21 +51,22 @@ function App() {
             <h1 id="title">Personal projects</h1>
         </div>
         <div id="rightSide">
-            <button>Button</button>
-            <button>Button</button>
+            <button onClick={() => openAbout()}>About</button>
+            {displayAbout ? <About/> : <></>}
         </div>
     </div>
     <div id="content">
         <ul>
-            <h2>Udemy</h2>
-            <h3>Angela Yu</h3>
-                <Card snapshot={ReactIcon} projectName='Dicee' projectDescription='Game of two dice, random numbers.' onClick={() => displayDiceeScreen()} collapseExpand={displayDicee} />
+            <h2>Courses</h2>
+            <h3>Udemy</h3>
+                <Card snapshot={DiceeSnapshot} projectName='Dicee' projectDescription='Game of two dice, random numbers and two players.' onClick={() => displayDiceeScreen()} collapseExpand={displayDicee} />
                 {displayDicee ? <Outlet/>:  <></>}
         </ul>
         <ul>
+            <h2>Personal projects</h2>
                 <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands." />
                 <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news."} />
-                <Card projectName='Coming soon' />
+                <Card snapshot={ReactIcon} projectName='Coming soon' />
         </ul>
         
     </div>

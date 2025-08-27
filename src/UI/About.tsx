@@ -1,5 +1,11 @@
+// interface AboutProps{
+//     openAbout: boolean
+// }
+
 export default function About() {
+
     return(<>
-        <p>About</p>
+    <div id="aboutModal"></div>
+        <p>About this page</p>
     </>)
 }
