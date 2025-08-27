@@ -1,0 +1,36 @@
+#modal{
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modalBackground);
+
+}
+
+#aboutModal {
+    display: grid;
+    grid-template-rows: minmax(50px, 80px) auto minmax(50px, 80px);
+
+    background-color: var(--backgroundColor-body);
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid var(--borderColor);
+    border-radius: 8px;
+    width: 40%;
+}
+
+#headerAbout {
+    display: grid;
+    grid-template-columns: auto 30px;
+}
+
+#closeModal {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+}

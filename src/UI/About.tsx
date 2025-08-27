@@ -1,11 +1,28 @@
-// interface AboutProps{
-//     openAbout: boolean
-// }
+interface AboutProps{
+    openAbout: () => boolean
+}
 
-export default function About() {
+import '../Styles/About.css';
+import CloseIcon from '../assets/Chevron_Double_Collapse.svg';
+
+export default function About(props: AboutProps) {
 
     return(<>
-    <div id="aboutModal"></div>
-        <p>About this page</p>
+        <div id='modal'>
+            <div id="aboutModal">
+                <div id='headerAbout'>
+                    <h1 className='title'>About this page</h1>
+                    <button onClick={() => props.openAbout()} id='closeModal'>
+                        <img src={CloseIcon}></img>
+                    </button>
+                </div>
+                <div id='contentAbout'>
+                    <p>Content</p>
+                </div>
+                <div id='footerAbout'>
+                    <p>Footer</p>
+                </div>
+            </div>
+        </div>
     </>)
 }

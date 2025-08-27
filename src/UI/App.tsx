@@ -48,11 +48,11 @@ function App() {
               <button disabled>Home</button> 
         </div>
         <div id="centerSide">
-            <h1 id="title">Personal projects</h1>
+            <h1 className="title">Personal projects</h1>
         </div>
         <div id="rightSide">
             <button onClick={() => openAbout()}>About</button>
-            {displayAbout ? <About/> : <></>}
+            {displayAbout ? <About openAbout={() => openAbout()}/> : <></>}
         </div>
     </div>
     <div id="content">
