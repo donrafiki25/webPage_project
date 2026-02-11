@@ -1,7 +1,23 @@
 import "../Styles/Portfolio.css";
-import webpage_figma_1 from "../assets/Images_Portfolio/HomePage_1080p.png";
+import webpage_wireframe from "../assets/Images_Portfolio/HomePage_wireframe.png";
+import webpage_prototype from "../assets/Images_Portfolio/HomePage_Prototype.png";
+
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 export default function Portfolio(){
+
+    const itemData = [
+        {
+            img: webpage_wireframe,
+            title: "Page wireframe",
+        },
+        {
+            img: webpage_prototype,
+            title: "Page HiFi Prototype",
+        },
+    ]
+
     return(<div id="portfolio">
         <h1>Portfolio: Rafael Agustín López Hernández</h1>
 
@@ -43,14 +59,31 @@ export default function Portfolio(){
         <ul>
             <li>Javascript</li>
             <li>Typescript</li>
+            <li>MaterialUI</li>
             <li>Git</li>
             <li>Figma</li>
         </ul>
         <p>The goal is creating a web page for my personal projects, and create a blog where I can upload my thoughts on music and tech.</p>
 
         <br/><hr/><br/>
-        
+
         <h1>Figma wireframes and prototypes</h1>
-        <img src={webpage_figma_1}></img>
+        <br/>
+
+        <ImageList sx={{ width: '100%', height: 500 }} cols={3} gap={20} rowHeight={200}>
+            {itemData.map((item) => (
+                <ImageListItem
+                key={item.img}
+                >
+                <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    title={item.title}
+                    loading="lazy"
+                />
+                </ImageListItem>
+            ))}
+        </ImageList>
     </div>)
 }

@@ -10,19 +10,16 @@ export default function EasterEgg(props: EasterEggProps) {
 
     const counter = () => {
         setClickCounter(clickCounter + 1);
-        console.log("Counter: " + clickCounter);
+        // console.log("Counter: " + clickCounter);
     }
 
     return(
         <>
-            <img src={props.snapshot} onClick={counter}></img>
+            
             {clickCounter === 11 ? (
                 <div>
-                    <h1>This is an easter egg, shhhh</h1>
-                    <div>
-                        <img></img>
-                    </div>
-                </div>): <></>}
+                    <p>This is an easter egg, shhhh</p>
+                </div>): <img src={props.snapshot} onClick={counter}></img>}
         </>
     )
 }

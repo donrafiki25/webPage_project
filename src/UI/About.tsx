@@ -24,7 +24,9 @@ export default function About(props: AboutProps) {
                 </div>
                 <div id='footerAbout' className='center'>
                     <p>By Rafael Agustin Lopez Hernandez</p>
+                    <br/>
                     <EasterEgg snapshot={EasterEggIcon}/>
+                    
                 </div>
             </div>
         </div>
