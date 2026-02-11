@@ -76,52 +76,49 @@ function App() {
 
     let currentYear: number = new Date().getFullYear();
 
-    // let openMail = window.open('mailto:rafael.ralh@gmail.com?subject=Contact')
-    
-
   return (
     <>
-      <div id="topbar">
-        <div id="leftSide">
-            <button id='homeButton' disabled>
-                <img src={HomeIcon}></img>    
-            </button> 
+        <div id="topbar">
+            <div id="leftSide">
+                <button id='homeButton' disabled>
+                    <img src={HomeIcon}></img>    
+                </button> 
+            </div>
+            <div id="centerSide">
+                <h1 className="title">Personal projects</h1>
+            </div>
+            <div id="rightSide">
+                <button id='aboutButton' onClick={() => openAbout()}>About this page</button>
+                {displayAbout ? <About openAbout={() => openAbout()}/> : <></>}
+            </div>
         </div>
-        <div id="centerSide">
-            <h1 className="title">Personal projects</h1>
+        <div id="content">
+            <ul id="cardList">
+                <h2>Courses</h2>
+                <h3>Udemy</h3>
+                    <Card snapshot={DiceeSnapshot} projectName='Dicee' projectDescription='Game of two dice, random numbers and two players.' onClick={() => displayDiceeScreen()} collapseExpand={displayDicee} />
+                    {displayDicee ? <Outlet/>:  <></>}
+            </ul>
+            <ul id="cardList">
+                <h2>Personal projects</h2>
+                    <Card snapshot={PortfolioIcon} projectName='Portfolio' projectDescription="Portfolio of different projects, as work previously done." onClick={() => displayPortfolioScreen() } collapseExpand={displayPortfolio}/>
+                        {displayPortfolio ? <Portfolio/> : <></>}
+                    <Card snapshot={MusicBlogIcon} projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands. [UNDER CONSTRUCTION]" onClick={() => openMusicBlog()} collapseExpand={displayMusicBlog} />
+                        {displayMusicBlog? <MusicBlog/> : <></>}
+                    <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news. [UNDER CONSTRUCTION]"} />
+            </ul>
+            
         </div>
-        <div id="rightSide">
-            <button id='aboutButton' onClick={() => openAbout()}>About this page</button>
-            {displayAbout ? <About openAbout={() => openAbout()}/> : <></>}
+        <div id="footer">
+            <div id="leftSide">
+                <p>Rafael Agustín López Hernández, {currentYear !== null ? currentYear : "Current year not available"}</p>
+            </div>
+            <div id="rightSide">
+                <button onClick={() => window.open("https://www.linkedin.com/in/rafael-agustín-lópez-hernández-420085191", '_blank')}> <img src={LinkedInIcon} title='Linkedin Profile'></img></button>
+                <button onClick={() => window.open(CVPDF, '_blank')}><img src={CVIcon} title='Curriculum Vitae'></img></button>
+                <button onClick={() => window.open('mailto:rafael.ralh@gmail.com?subject=Contact', '_blank')}><img src={EmailIcon} title='Email'></img></button>
+            </div>
         </div>
-    </div>
-    <div id="content">
-        <ul id="cardList">
-            <h2>Courses</h2>
-            <h3>Udemy</h3>
-                <Card snapshot={DiceeSnapshot} projectName='Dicee' projectDescription='Game of two dice, random numbers and two players.' onClick={() => displayDiceeScreen()} collapseExpand={displayDicee} />
-                {displayDicee ? <Outlet/>:  <></>}
-        </ul>
-        <ul id="cardList">
-            <h2>Personal projects</h2>
-                <Card snapshot={PortfolioIcon} projectName='Portfolio' projectDescription="Portfolio of different projects, as work previously done." onClick={() => displayPortfolioScreen() } collapseExpand={displayPortfolio}/>
-                    {displayPortfolio ? <Portfolio/> : <></>}
-                <Card snapshot={MusicBlogIcon} projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands. [UNDER CONSTRUCTION]" onClick={() => openMusicBlog()} collapseExpand={displayMusicBlog} />
-                    {displayMusicBlog? <MusicBlog/> : <></>}
-                <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news. [UNDER CONSTRUCTION]"} />
-        </ul>
-        
-    </div>
-    <div id="footer">
-        <div id="leftSide">
-            <p>Rafael Agustín López Hernández, {currentYear !== null ? currentYear : "Current year not available"}</p>
-        </div>
-        <div id="rightSide">
-            <button onClick={() => window.open("https://www.linkedin.com/in/rafael-agustín-lópez-hernández-420085191", '_blank')}> <img src={LinkedInIcon} title='Linkedin Profile'></img></button>
-            <button onClick={() => window.open(CVPDF, '_blank')}><img src={CVIcon} title='Curriculum Vitae'></img></button>
-            <button onClick={() => window.open('mailto:rafael.ralh@gmail.com?subject=Contact', '_blank')}><img src={EmailIcon} title='Email'></img></button>
-        </div>
-    </div>
     </>
   )
 }

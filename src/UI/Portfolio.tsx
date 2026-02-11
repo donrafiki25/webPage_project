@@ -1,6 +1,7 @@
 import "../Styles/Portfolio.css";
 import webpage_wireframe from "../assets/Images_Portfolio/HomePage_wireframe.png";
 import webpage_prototype from "../assets/Images_Portfolio/HomePage_Prototype.png";
+import webpage_prototype_about from "../assets/Images_Portfolio/HomePage_Prototype_about.png";
 
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -14,7 +15,11 @@ export default function Portfolio(){
         },
         {
             img: webpage_prototype,
-            title: "Page HiFi Prototype",
+            title: "Page High Fidelity prototype",
+        },
+        {
+            img: webpage_prototype_about,
+            title: "High Fidelity about prototype"
         },
     ]
 
