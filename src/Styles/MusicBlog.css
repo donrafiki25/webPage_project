@@ -1,11 +1,5 @@
-#portfolio{
+#musicBlog{
     border: 1px solid var(--shadowAndHoverColor);
     border-radius: 8px;
     padding: 10px;
-
-    background-color: #FFF7FE;
-}
-
-#disclamer{
-    color: var(--descriptionText);
 }

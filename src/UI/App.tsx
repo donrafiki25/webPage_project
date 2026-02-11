@@ -11,11 +11,15 @@ import HomeIcon from '../assets/HomeIcon_Fill.svg';
 import Card from '../Controls/Card';
 import About from './About';
 
+import MusicBlog from './MusicBlog';
+import Portfolio from'./Portfolio';
+
 function App() {
 
     let navigate = useNavigate();
 
     let [displayDicee, setDisplayDicee] = useState<boolean>(false);
+    let[displayMusicBlog, setDisplayMusicBlog] = useState<boolean>(false);
     let [displayPortfolio, setDisplayPortfolio] = useState<boolean>(false);
     let [displayAbout, setDisplayAbout] = useState<boolean>(false);
 
@@ -35,14 +39,20 @@ function App() {
 
     function displayPortfolioScreen(): boolean {
         if(displayPortfolio === true){
-            navigate('/');
             setDisplayPortfolio(false);
-            
             return false;
         } else {
-            navigate('/Portfolio');
             setDisplayPortfolio(true);
-            
+            return true;
+        }
+    }
+
+    function openMusicBlog(): boolean {
+        if(displayMusicBlog === true){
+            setDisplayMusicBlog(false);
+            return false;
+        } else {
+            setDisplayMusicBlog(true);
             return true;
         }
     }
@@ -83,8 +93,9 @@ function App() {
         <ul id="cardList">
             <h2>Personal projects</h2>
                 <Card snapshot={PortfolioIcon} projectName='Portfolio' projectDescription="Portfolio of different projects, as work previously done." onClick={() => displayPortfolioScreen() } collapseExpand={displayPortfolio}/>
-                    {displayPortfolio ? <Outlet/> : <></>}
-                <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands. [UNDER CONSTRUCTION]" />
+                    {displayPortfolio ? <Portfolio/> : <></>}
+                <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands. [UNDER CONSTRUCTION]" onClick={() => openMusicBlog()} collapseExpand={displayMusicBlog} />
+                    {displayMusicBlog? <MusicBlog/> : <></>}
                 <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news. [UNDER CONSTRUCTION]"} />
         </ul>
         

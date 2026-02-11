@@ -1,4 +1,5 @@
 import "../Styles/Portfolio.css";
+import webpage_figma_1 from "../assets/Images_Portfolio/HomePage_1080p.png";
 
 export default function Portfolio(){
     return(<div id="portfolio">
@@ -45,5 +46,11 @@ export default function Portfolio(){
             <li>Git</li>
             <li>Figma</li>
         </ul>
+        <p>The goal is creating a web page for my personal projects, and create a blog where I can upload my thoughts on music and tech.</p>
+
+        <br/><hr/><br/>
+        
+        <h1>Figma wireframes and prototypes</h1>
+        <img src={webpage_figma_1}></img>
     </div>)
 }
