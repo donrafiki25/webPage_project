@@ -3,6 +3,7 @@
     grid-template-columns: minmax(70px, 120px) auto 50px;
 
     border: 1px var(--shadowAndHoverColor) solid;
+    border-radius: 8px;
 
     min-height: 50px;
     max-height: 100px;

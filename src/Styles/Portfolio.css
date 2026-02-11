@@ -1,0 +1,9 @@
+#portfolio{
+    border: 1px solid var(--shadowAndHoverColor);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#disclamer{
+    color: var(--descriptionText);
+}

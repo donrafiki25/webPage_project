@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import './Styles/General.css'
 import App from './UI/App.tsx'
 import Dicee from './UI/Dicee.tsx'
+import Portfolio from './UI/Portfolio.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 createRoot(document.getElementById('root')!).render(
@@ -9,6 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route path='/' element={<App/>}>
         <Route path='/Dicee' element={<Dicee/>}/>
+        <Route path='/Portfolio' element={<Portfolio/>}/>
       </Route>
     </Routes>
   </BrowserRouter>,

@@ -2,7 +2,7 @@ body {
     background-color: var(--backgroundColor-body);
 }
 
-ul {
+#cardList {
     list-style: none;
     padding: 0;
 }

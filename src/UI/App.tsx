@@ -4,8 +4,8 @@ import { useNavigate, Outlet } from 'react-router';
 import '../Styles/General.css';
 import '../Styles/App.css';
 
-import ReactIcon from "../assets/react.svg";
 import DiceeSnapshot from "../assets/Dicee/DiceeCardSnapshot.png";
+import PortfolioIcon from "../assets/Portfolio.svg";
 import HomeIcon from '../assets/HomeIcon_Fill.svg';
 
 import Card from '../Controls/Card';
@@ -16,6 +16,7 @@ function App() {
     let navigate = useNavigate();
 
     let [displayDicee, setDisplayDicee] = useState<boolean>(false);
+    let [displayPortfolio, setDisplayPortfolio] = useState<boolean>(false);
     let [displayAbout, setDisplayAbout] = useState<boolean>(false);
 
     function displayDiceeScreen(): boolean {
@@ -27,6 +28,20 @@ function App() {
         } else {
             navigate('/Dicee');
             setDisplayDicee(true);
+            
+            return true;
+        }
+    }
+
+    function displayPortfolioScreen(): boolean {
+        if(displayPortfolio === true){
+            navigate('/');
+            setDisplayPortfolio(false);
+            
+            return false;
+        } else {
+            navigate('/Portfolio');
+            setDisplayPortfolio(true);
             
             return true;
         }
@@ -59,17 +74,18 @@ function App() {
         </div>
     </div>
     <div id="content">
-        <ul>
+        <ul id="cardList">
             <h2>Courses</h2>
             <h3>Udemy</h3>
                 <Card snapshot={DiceeSnapshot} projectName='Dicee' projectDescription='Game of two dice, random numbers and two players.' onClick={() => displayDiceeScreen()} collapseExpand={displayDicee} />
                 {displayDicee ? <Outlet/>:  <></>}
         </ul>
-        <ul>
+        <ul id="cardList">
             <h2>Personal projects</h2>
-                <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands." />
-                <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news."} />
-                <Card snapshot={ReactIcon} projectName='Coming soon' />
+                <Card snapshot={PortfolioIcon} projectName='Portfolio' projectDescription="Portfolio of different projects, as work previously done." onClick={() => displayPortfolioScreen() } collapseExpand={displayPortfolio}/>
+                    {displayPortfolio ? <Outlet/> : <></>}
+                <Card projectName='Music blog' projectDescription="A UI prototype for a music blog, where to find music and the history of the bands. [UNDER CONSTRUCTION]" />
+                <Card projectName='Techat [Name not final?]' projectDescription={"Personal blog where I would talk about tech, music, and news. [UNDER CONSTRUCTION]"} />
         </ul>
         
     </div>
