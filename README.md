@@ -2,9 +2,9 @@
 
 This project has the purpose of learning technologies, show what I have been learning in Udemy courses and keep using tools like Figma to design the UI, make icons, as so on.
 
-##Technologies
+## Technologies
 - HTML
 - CSS
-- JS
+- JavaScript
 - TypeScript
-
+- API calls
