@@ -1,6 +1,10 @@
-# Web page project
-## By Rafael Lopez
+# webPage_project
 
-This project was made to practice, while creating something step by step.
+This project has the purpose of learning technologies, show what I have been learning in Udemy courses and keep using tools like Figma to design the UI, make icons, as so on.
 
-Using Vite, Typescript, React, and plenty CSS.
+##Technologies
+- HTML
+- CSS
+- JS
+- TypeScript
+
